@@ -4,6 +4,20 @@ import "fmt"
 func main() {
     f()
     fmt.Println("Normaly returned from f")
+whatAmI := func(i interface{}) {
+    switch i.(type) {
+    case bool:
+        fmt.Println("Its a bool")
+
+    case int:
+        fmt.Println("Its an integer")
+
+    default:
+        fmt.Println("Dont know type")
+    }
+}
+whatAmI(1)
+whatAmI(true)
 }
 
 func f() {
