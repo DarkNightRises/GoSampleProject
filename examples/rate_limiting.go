@@ -3,7 +3,7 @@ import "fmt"
 import "time"
 func main() {
 requests := make(chan int, 5)
-for i:= 1;i<=5;i++ {
+for i:= 1; i<=5; i++ {
 requests <- i
 }
 close(requests)
